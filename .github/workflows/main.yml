@@ -165,6 +165,11 @@ jobs:
           path: ${{github.workspace}}/dist/
 
       - name: Initiating Integration Tests
+        # consider: https://github.com/marketplace/actions/trigger-workflow-and-wait
+        # consider: https://github.com/mostafahussein/workflow-watcher
+        # consider: https://github.com/marketplace/actions/wait-on-check
+        # consider: https://github.com/Codex-/await-remote-run
+        # consider: https://github.com/Codex-/return-dispatch
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |

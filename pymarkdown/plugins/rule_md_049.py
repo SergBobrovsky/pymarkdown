@@ -274,5 +274,4 @@ class AnchorValidator:
         for link_anchor in anchors.keys():
             link_regex = anchor2regex(link_anchor)
             if not [heading for heading in headings if link_regex.match(heading)]:
-                for trigger_params in anchors[link_anchor]:
-                    yield trigger_params
+                yield from anchors[link_anchor]

@@ -20,7 +20,7 @@ def __read_pipfile() -> Dict[str, str]:
     except configparser.Error as this_exception:
         formatted_error = (
             f"Specified file '{__PIPFILE_FILE_NAME}' "
-            + f"is not a valid config file: {str(this_exception)}."
+            f"is not a valid config file: {str(this_exception)}."
         )
         print(formatted_error, file=sys.stderr)
         sys.exit(1)
@@ -48,7 +48,7 @@ def __read_requirements_file() -> Dict[str, Tuple[str, str]]:
     except OSError as this_exception:
         formatted_error = (
             f"Specified file '{__PIPFILE_FILE_NAME}' "
-            + f"is not a valid requirements file: {str(this_exception)}."
+            f"is not a valid requirements file: {str(this_exception)}."
         )
         print(formatted_error, file=sys.stderr)
         sys.exit(1)
